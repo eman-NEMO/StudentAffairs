@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Success</title>
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+    <link rel="stylesheet" href="{% static 'css/success.css' %}">
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Barlow:wght@800&family=Fraunces:wght@700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nav">
+        <button class="toggle" id="show-ul"> <span class="s1"></span> <span  class="s2"></span> <span class="s3"></span> </button>
+        <div class="clear"></div>  
+        <ul id="nav">
+            <li> <a href="{% url 'Home' %}" id="home">Home</a> </li>
+            <li> <a href="{% url 'Add' %}">Add</a> </li>
+            <li> <a href="{% url 'table' %}">Students Information</a> </li>
+            <li> <a href="{% url 'search' %}">Search</a> </li>
+            <li> <a href="{% url 'Help' %}">Help</a> </li>
+        </ul>
+        <div class="clear"></div>
+    </div>
+    <div class="msg">
+        <h3>Success</h3>
+        <p>The process done successfully!</p>
+        <button><a href="{% url 'Home' %}">Go to home page</a></button>
+    </div>
+</body>

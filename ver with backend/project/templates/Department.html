@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Student's Department Assignment Page</title>
+        <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+        <link rel="stylesheet" href="{% static 'css/form.css' %}">
+        <link rel="stylesheet" href="{% static 'css/dep.css' %}">
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Barlow:wght@800&family=Fraunces:wght@700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="nav">
+            <button class="toggle" id="show-ul"> <span class="s1"></span> <span  class="s2"></span> <span class="s3"></span> </button>
+            <div class="clear"></div>
+            <ul id="nav">
+                <li> <a href="{% url 'Home' %}" id="home">Home</a> </li>
+                <li> <a href="{% url 'Add' %}">Add</a> </li>
+                <li> <a href="{% url 'table' %}">Students Information</a> </li>
+                <li> <a href="{% url 'search' %}">Search</a> </li>
+                <li> <a href="{% url 'Help' %}">Help</a> </li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+        <img src="{% static 'images/new/undraw/dep2.svg' %}" >
+        <h2>Student's Department Assignment</h2>
+        <div>
+            <form method="POST" action="{% url 'changeDep' stu.stuId %}">
+                {% csrf_token %}
+                <div>
+                    <label class="lab" for="stuName">Student Name</label>
+                    <br>
+                    <input class="inp" type="text" id="stuName" name="stuName" value="{{stu.name}}" disabled>
+                </div>
+                <div>
+                    <label class="lab" for="stuID">Student ID</label>
+                    <br>
+                    <input class="inp" type="text" id="stuID" name="stuID" value="{{stu.stuId}}" disabled>
+                </div>
+                <div>
+                    <label class="lab">Departament</label>
+                    <br>
+                    <div class="sub">
+                        <select class="inp" name="department">
+                            <option value="CS">CS</option>
+                            <option value="DS">DS</option>
+                            <option value="IS">IS</option>
+                            <option value="IT">IT</option>
+                            <option value="AI">AI</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="sub">
+                    <input id="save" type="submit" value="Save">
+                </div>
+            </form>
+        </div>
+        <!-- java script file -->
+        <script src="{% static 'js/nav.js' %}"></script>
+    </body>
+</html>

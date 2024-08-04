@@ -1,0 +1,112 @@
+/**/
+:root {
+    --first-color: #d8b501;
+    --second-color: #353738;
+    --third-color: #698404;
+    --background: #eee;
+    --extra-color: rgb(230, 230, 230);
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Arvo', serif;
+    background-color: var(--background);
+    color: var(--second-color);
+}
+/**/
+.nav {
+    background-color: var(--second-color);
+}
+.clear {
+    clear: both;
+}
+.nav ul{
+    float: right;
+    margin: 10px;
+}
+.nav ul li {
+    display: inline-block;
+    margin: 10px 4px;
+}
+.nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    transition: 0.4s;
+}
+#home{
+    background-color: var(--first-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+.nav ul li a.page {
+    color: var(--first-color);
+}
+.toggle {
+    display: none;
+}
+@media (max-width: 1000px)
+{
+    .clear {
+        clear: both;
+    }
+    .toggle {
+        display: block;
+        position: relative;
+        float: right;
+        right: 10px;
+        top: 10px;
+        z-index: 1;
+        width: 40px;
+        height: 50px;
+        background-color: transparent;
+        border: none;
+        margin: 0;
+        cursor: pointer;
+    }
+    .toggle span {
+        position: absolute;
+        width: 100%;
+        height: 5px;
+        background-color: var(--background);
+        border-radius: 3px;
+    }
+    .toggle span.s1 {
+        left: 0;
+        top: 0;
+    }
+    .toggle span.s2 {
+        left: 0;
+        top: 10px;
+    }
+    .toggle span.s3 {
+        left: 0;
+        top: 20px;
+    }
+    .nav ul{
+        display: none;
+        float: none;
+    }
+    .nav ul.show{
+        display: block;
+    }
+    .nav ul li {
+        display: block;
+        text-align: center;
+        background-color: var(--second-color);
+        padding: 15px;
+        border-top: 1px solid var(--background);
+    }
+    .nav ul li a{
+        color: white;
+    }
+    #home{
+        color: white;
+        background-color: transparent;
+    }
+}

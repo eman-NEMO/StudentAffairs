@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Student List</title>
+        <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+        <link rel="stylesheet" href="{% static 'css/table.css' %}">
+
+        <!-- google font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Barlow:wght@800&family=Fraunces:wght@700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="nav">
+            <button class="toggle" id="show-ul"> <span class="s1"></span> <span  class="s2"></span> <span class="s3"></span> </button>
+            <div class="clear"></div>  
+            <ul id="nav">
+                <li> <a href="{% url 'Home' %}" id="home">Home</a> </li>
+                <li> <a href="{% url 'Add' %}">Add</a> </li>
+                <li> <a href="{% url 'table' %}" class="page">Students Information</a> </li>
+                <li> <a href="{% url 'search' %}">Search</a> </li>
+                <li> <a href="{% url 'Help' %}">Help</a> </li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+
+        <h2>Student List</h2>
+        <p class="all-info">
+            <span class="big">Total: </span> {{stu.count}} <span class="big">student</span>
+            <span class="big">| Active:</span> <span id="total_active">{{totalActive.count}}</span> <span class="big">student</span>
+            <span class="big">| Inactive:</span> <span id="total_inactive">{{totalInactive.count}}</span> <span class="big">student</span>
+        </p>
+        <table>
+            <tr id ="head_tr">
+                <th>Name</th>
+                <th>ID</th>
+                <th>Department</th>
+                <th>Email</th>
+                <th>GPA</th>
+                <th>Phone</th>
+                <th>Date of Birth</th>
+                <th>Level</th>
+                <th>Gender</th>
+                <th>Status</th>
+                <th>Edit</th>
+            </tr>
+            {% for student in stu %}
+            <tr>
+                <td>{{student.name|capfirst}}</td>
+                <td>{{student.stuId}}</td>
+                <td>{{student.department}}</td>
+                <td>{{student.email}}</td>
+                <td>{{student.GPA}}</td>
+                <td>{{student.phone}}</td>
+                <td>{{student.date|date:'Y-m-d'}}</td>
+                <td>{{student.level}}</td>
+                <td>{{student.gender}}</td>
+                <td class="activate">{{student.status}}</td>
+                <td>
+                    <button class="btn">Change Status</button> 
+                    <button class="btn"><a href="{% url 'Edit' student.stuId %}">Edit</a></button>
+                    <button class="btn" type="submit" disabled>Save</button>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <!-- java script file -->
+        <script src="{% static 'js/nav.js' %}"></script>
+        <script src="{% static 'js/table.js' %}"></script>
+    </body>
+</html>
