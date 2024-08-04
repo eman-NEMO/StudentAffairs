@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Affairs Home Page</title>
+    <link rel="stylesheet" href="css/home.css">
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Barlow:wght@800&family=Fraunces:wght@700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="back">
+        <button class="toggle" id="show-ul"> <span class="s1"></span> <span  class="s2"></span> <span class="s3"></span> </button>
+        <div class="nav">
+            <ul id="nav">
+                <li> <a href="Home.html" id="home">Home</a> </li>
+                <li> <a href="Add.html">Add</a> </li>
+                <li> <a href="edit.html">Edit</a> </li>
+                <li> <a href="table.html">Students Information</a> </li>
+                <li> <a href="search.html">Search</a> </li>
+                <li> <a href="Help.html">Help</a> </li>
+            </ul>
+        </div>
+        <div class="up" id="up"><img src="images/up.png" alt=""></div>
+        <div class="first-part">
+            <h1>Student Affairs</h1>
+            <p>welcome! from this website you have online control to all student 
+                information in the collage.
+            </p>
+        </div>
+    </div>
+
+    <div class="corner second-part">
+        <div class="header">
+            <h3>Features</h3>
+            <p>what do you think this website can do?</p>
+        </div>
+        <div class="parts">
+            <div class="p1">
+                <img src="images/new/4.png" >
+                <p>Add & Edit Student Information</p>
+            </div>
+            <div class="p2">
+                <img src="images/new/1.png" >
+                <p>Show All Student Information in Your System</p>
+            </div>
+            <div class="p3">
+                <img src="images/new/2.png" >
+                <p>Find a Specific Student Information in Your System</p>
+            </div>
+            <div class="p4">
+                <img src="images/new/3.png" >
+                <p>Assign Student Department</p>
+            </div>
+        </div>
+        <button class="any-help"><a href="Help.html">More Details</a></button>
+    </div>
+
+    <div class="corner final">
+        <img src="images/new/istockphoto-1152872650-612x612.jpg" alt="">
+        <div class="the-form">
+        <h2>Contact Us</h2>
+        <form id="form">
+            <div class="name">
+                <label>Name</label>
+                <br>
+                <input type="text" name="name" placeholder="Write your name">
+                <p class="check" id="checkN"></p>
+            </div>
+            <br>
+            <div class="email">
+                <label>Email</label>
+                <br>
+                <input type="email" name="email" placeholder="Write your email">
+                <p class="check" id="checkE"></p>
+            </div>
+            <br>
+            <div class="area">
+                <label>What do you want?</label>
+                <br>
+                <textarea name="area" placeholder="Write your complaint"></textarea>
+                <p class="check" id="cnt"></p>
+                <p class="check" id="checkA"></p>
+            </div>
+            <br>
+            <input type="submit" value="Send">
+        </form>
+        </div>
+    </div>
+
+    <!-- java script file -->
+    <script src="js/home.js"></script>
+    <script src="js/nav.js"></script>
+</body>
+</html>

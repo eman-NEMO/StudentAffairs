@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Student List</title>
+        <link rel="stylesheet" href="css/nav.css">
+        <link rel="stylesheet" href="css/table.css">
+
+        <!-- google font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Barlow:wght@800&family=Fraunces:wght@700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="nav">
+            <button class="toggle" id="show-ul"> <span class="s1"></span> <span  class="s2"></span> <span class="s3"></span> </button>
+            <div class="clear"></div>  
+            <ul id="nav">
+                <li> <a href="Home.html" id="home">Home</a> </li>
+                <li> <a href="Add.html">Add</a> </li>
+                <li> <a href="edit.html">Edit</a> </li>
+                <li> <a href="table.html" class="page">Students Information</a> </li>
+                <li> <a href="search.html">Search</a> </li>
+                <li> <a href="Help.html">Help</a> </li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+
+        <h2>Student List</h2>
+        <table>
+            <tr id ="head_tr">
+                <th>Name</th>
+                <th>ID</th>
+                <th>Department</th>
+                <th>Email</th>
+                <th>GPA</th>
+                <th>Phone</th>
+                <th>Date of Birth</th>
+                <th>Level</th>
+                <th>Gender</th>
+                <th>Status</th>
+                <th>Edit</th>
+            </tr>
+            <tr>
+                <td>Deena Ahmed </td>
+                <td>20201061</td>
+                <td>CS</td>
+                <td>a@gmail.com</td>
+                <td>3.5</td>
+                <td>0123456789</td>
+                <td>13-2-2001</td>
+                <td>Third Level</td>
+                <td>Female</td>
+                <td class="activate">Active</td>
+                <td><button class="btn">Change Status</button> <button class="btn" type="submit">Save</button></td>
+            </tr>
+            <tr>
+                <td>Dina Ahmed </td>
+                <td>20201062</td>
+                <td>CS</td>
+                <td>i@gmail.com</td>
+                <td>3.6</td>
+                <td>0123456787</td>
+                <td>13-8-2002</td>
+                <td>Third Level</td>
+                <td>Female</td>
+                <td class="activate">Active</td>
+                <td><button class="btn">Change Status</button> <button class="btn" type="submit">Save</button></td>            </tr>
+            <tr>
+                <td>Donia Ahmed </td>
+                <td>20201063</td>
+                <td>CS</td>
+                <td>d@gmail.com</td>
+                <td>3.7</td>
+                <td>0123456788</td>
+                <td>16-4-2001</td>
+                <td>Third Level</td>
+                <td>Female</td>
+                <td class="activate">Active</td>
+                <td><button class="btn">Change Status</button> <button class="btn" type="submit">Save</button></td>            </tr>
+        </table>
+
+        <!-- java script file -->
+        <script src="js/nav.js"></script>
+        <script src="js/table.js"></script>
+    </body>
+</html>

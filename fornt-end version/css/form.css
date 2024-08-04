@@ -1,0 +1,74 @@
+/**/
+:root {
+    --first-color: #d8b501;
+    --second-color: #353738;
+    --third-color: #698404;
+    --background: #eee;
+    --extra-color: rgb(230, 230, 230);
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+/**/
+form {
+    padding: 20px;
+    background-color: var(--extra-color);
+    width: 25%;
+    margin: 30px 80px;
+    border-radius: 20px;
+}
+@media (max-width: 1000px)
+{
+    form {
+        width: 70%;
+        margin: 0 auto;
+    }
+} 
+form div {
+    padding: 10px;
+}
+form div .lab {
+    font-weight: bold;
+    font-size: 15px;
+}
+form div .inp{
+    width: calc(100% - 20px);
+    height: 30px;
+    border: none;
+    font-family: 'Arvo', serif;
+    border-radius: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    outline: none;
+}
+/**/
+.sub {
+    text-align: center;
+}
+input[type="submit"],  #delete{
+    cursor: pointer;
+    border: none;
+    background-color: var(--first-color);
+    padding: 8px 20px;
+    border-radius: 5px;
+    color: white;;
+    font-family: 'Arvo', serif;
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+input[type="submit"]:hover, #delete:hover{
+    background-color: var(--second-color);
+}
+/**/
+input[disabled]{
+    background-color: var(--second-color);
+    color: white;
+}
+
+.check {
+    color: rgb(253, 89, 89);
+    font-size: 15px;
+}

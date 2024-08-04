@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Help</title>
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/help.css">
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Barlow:wght@800&family=Fraunces:wght@700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nav">
+        <button class="toggle" id="show-ul"> <span class="s1"></span> <span  class="s2"></span> <span class="s3"></span> </button>
+        <div class="clear"></div>    
+        <ul id="nav">
+            <li> <a href="Home.html" id="home">Home</a> </li>
+            <li> <a href="Add.html">Add</a> </li>
+            <li> <a href="edit.html">Edit</a> </li>
+            <li> <a href="table.html">Students Information</a> </li>
+            <li> <a href="search.html">Search</a> </li>
+            <li> <a href="Help.html" class="page">Help</a> </li>
+        </ul>
+        <div class="clear"></div>
+    </div>
+    <div class="title">
+        <h1>Help</h1>
+        <p>This page can help you to know what each page is doing</p>
+        <h3>Select what do you want</h3>
+        <div class="buttons">
+            <button> <a href="#add-student">Add</a> </button>
+            <button> <a href="#edit-student">Edit</a> </button>
+            <button> <a href="#all-student">Students Information</a> </button>
+            <button> <a href="#search">Search</a> </button>
+            <button> <a href="#department">Student's Department Assignment</a> </button>
+        </div>
+    </div>
+
+    <div class="corner all">
+        <div class="info" id="add-student">
+            <img src="images/new/undraw/add3.svg" width="100px">
+            <div class="text">
+                <h3>Add New Student</h3>
+                <p>
+                    This page can help you to add a new student to the system, you should
+                    follow specific criteria to add new student data, like: student's name 
+                    should be added without any numbers, student's id should be 8 numbers 
+                    without any letters, student's GPA should be from 0 to 4, student should be 
+                    greater than 16 years old, phone number should have 11 number (e.g., 
+                    0110 123 4567), student's level must be fourth or third if he have specific 
+                    department (else you can select None) and you should select student's gender 
+                    and status.
+                </p>
+            </div>
+        </div>
+        <div class="info" id="edit-student">
+            <div class="text">
+                <h3>Edit Student Data</h3>
+                <p>
+                    This page can help you to update or delete an existing student information with 
+                    the same criteria that used in “Add Student” page but you cannot update student 
+                    department, if you want to change department you should use "Search" and "Student's 
+                    Department Assignment" page.
+                </p>
+            </div>
+            <img src="images/new/undraw/update.svg" width="100px">
+        </div>
+        <div class="info" id="all-student">
+            <img src="images/new/undraw/all.svg" width="100px">
+            <div class="text">
+                <h3>Students Information</h3>
+                <p>
+                    This page view all active/inactive students in your system, you 
+                    can also change student' status from this page.
+                </p>
+            </div>
+        </div>
+        <div class="info" id="search">
+            <div class="text">
+                <h3>Search</h3>
+                <p>
+                    This page can help you find any active student by his name, after search you 
+                    can change student's department through "Student's Department Assignment" page.
+                </p>
+            </div>
+            <img src="images/new/undraw/searxh.svg" width="100px">
+        </div>
+        <div class="info" id="department">
+            <img src="images/new/undraw/dep.svg" width="100px">
+            <div class="text">
+                <h3>Student's Department Assignment</h3>
+                <p>
+                    This page can help you to assign department to student after searching, this 
+                    page has student's id, name and list of departments but the student should be 
+                    "Third Level" or "Fourth Level" to do select any department from this page, you 
+                    can reach this page only after searching.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- java script file -->
+    <script src="js/nav.js"></script>
+</body>
+</html>

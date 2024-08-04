@@ -1,0 +1,24 @@
+.search {
+    text-align: center;
+}
+#stuSearch {
+    width: 400px;
+    height: 30px;
+    border: none;
+    font-family: 'Arvo', serif;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    padding-right: 20px;
+    padding-left: 20px;
+    outline: none;
+}
+.search label button {
+    height: 30px;
+    border-radius: 0;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}

@@ -1,0 +1,65 @@
+/**/
+:root {
+    --first-color: #d8b501;
+    --second-color: #353738;
+    --third-color: #698404;
+    --background: #eee;
+    --extra-color: rgb(230, 230, 230);
+
+}
+.corner {
+    padding: 0 150px;
+    margin: 0 auto;
+}
+@media (max-width: 1000px)
+{
+    .corner {
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+}
+html {
+    scroll-behavior: smooth;
+}
+/**/
+h2 {
+    font-size: 50px;
+    padding: 20px;
+    text-align: center;
+}
+table {
+    border-radius: 5px;
+    text-align: center;
+    border-spacing: 4px;
+    margin: 5px auto;
+    width: 100%;
+    min-width: 1100px;
+}
+td, th {
+    border-radius: 3px;
+    padding: 5px;
+    height: 50px;
+}
+td {
+    background-color: var(--extra-color);
+}
+th {
+    height: 30px;
+    background-color: var(--second-color);
+    color: white;
+}
+.btn{
+    cursor: pointer;
+    border: none;
+    background-color: var(--first-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    font-family: 'Arvo', serif;
+    font-weight: bold;
+    margin: 5px;
+    transition: 0.4s;
+}
+.btn:hover{
+    background-color: var(--second-color);
+}
